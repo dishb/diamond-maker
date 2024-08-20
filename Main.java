@@ -13,15 +13,15 @@ public class Main implements Directions {
         int length = Integer.parseInt(input);
         s.close();
 
-        int winWidth = (2 * length) + 1;
-        int winLength = (2 * length) + 1;
+        int winWidth = (2 * length) - 1;
+        int winLength = (2 * length);
 
         Robot r = new Robot(1, winWidth / 2, East, (length * 4) - 4);
 
         World.setVisible(true);
-        World.setSize(winWidth, winLength);
-        World.setDelay(5);
-
+        World.setSize(winLength, winWidth);
+        World.setDelay(3);
+        
         // Make a diamond with a specified length
         diamond(length, r);
 
